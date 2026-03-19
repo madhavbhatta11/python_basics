@@ -29,3 +29,23 @@ while true:
     break
   else:
     print 
+
+#about functions
+def function_name( parameter ):
+  pass
+#Example of function
+
+def isgreater(a, b):
+  if a>b:
+    print("first is greater")
+  elif a<b:
+    print("2nd is greater")
+  else:
+    print("equal")
+a=int(input("Enter the first number"))
+b=int(input("Enter 2nd number"))
+
+isgreater(a, b)
+c=int(input("Enter the THIRD number"))
+d=int(input("Enter the FOURTH number"))
+isgreater(c, d)
