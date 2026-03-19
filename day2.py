@@ -10,3 +10,7 @@ match num:
         print("The number is <= 2")
     case _:
         print("The value is:", num)
+    #adding condition in case
+    case _ if num<0:
+        print("number is ngetive")
+    
