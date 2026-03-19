@@ -13,4 +13,7 @@ match num:
     #adding condition in case
     case _ if num<0:
         print("number is ngetive")
+    case _ if num!=1 and num1=2 and num>=0 and num !=0:
+        print("Out of range , and number is ", num)
+
     
