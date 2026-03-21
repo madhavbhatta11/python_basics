@@ -32,25 +32,36 @@ while True:
     if choice == "1":
         task = input("Enter task: ")
         tasks.append(task)
-        print("Task added!",tasks)
+        print("Task added!")
 
     elif choice == "2":
-        task = input("Enter task to remove: ")
-        if task in tasks:
-            tasks.remove(task)
-            print("Task removed!")
+        if not tasks:
+            print("No tasks to remove!")
         else:
-            print("Task not found!")
+            for i, t in enumerate(tasks, start=1):
+                print(i, t)
+
+            try:
+                idx = int(input("Enter task number to remove: "))
+                if 1 <= idx <= len(tasks):
+                    removed = tasks.pop(idx - 1)
+                    print(f"Removed: {removed}")
+                else:
+                    print("Invalid number!")
+            except ValueError:
+                print("Enter a valid number!")
 
     elif choice == "3":
-        # print("Your Tasks:", tasks)
         if not tasks:
-            print("No tasks added yet!")  
-        else:  
-            for i, t in enumerate(tasks):
-                print(i+1, t)
+            print("No tasks added yet!")
+        else:
+            for i, t in enumerate(tasks, start=1):
+                print(i, t)
 
     elif choice == "4":
         print("Exiting program...")
         break
+
+    else:
+        print("Invalid choice!")
 
